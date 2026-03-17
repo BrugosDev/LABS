@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 ## Executar
 
-python Segundo/test_encoder.py
+python test_encoder.py
 
 ## Estrutura
 

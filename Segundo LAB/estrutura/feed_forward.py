@@ -15,7 +15,7 @@ class FeedForward:
 
         hidden = X @ self.W1 + self.b1
 
-        hidden = np.maximum(0, hidden)  # ReLU
+        hidden = np.maximum(0, hidden)  
 
         output = hidden @ self.W2 + self.b2
 
