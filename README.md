@@ -10,7 +10,7 @@ O objetivo dos laboratórios é construir os principais componentes de um Transf
 
 ### 🔹 Lab 1 – Scaled Dot-Product Attention
 
-Implementação do mecanismo central de atenção utilizado nos Transformers.
+Implementação do mecanismo central de atenção utilizado nos Transformers.  
 Neste laboratório foi desenvolvido o cálculo da atenção utilizando **Query, Key e Value**, além da normalização com **Softmax**.
 
 ---
@@ -19,10 +19,10 @@ Neste laboratório foi desenvolvido o cálculo da atenção utilizando **Query, 
 
 Neste laboratório foi explorado o funcionamento interno do **Encoder**, incluindo:
 
-* Self-Attention
-* Positional Encoding
-* Conexões residuais (**Add & Norm**)
-* Implementação da **Causal Mask** para impedir acesso a tokens futuros
+* Self-Attention  
+* Positional Encoding  
+* Conexões residuais (**Add & Norm**)  
+* Implementação da **Causal Mask** para impedir acesso a tokens futuros  
 
 ---
 
@@ -32,9 +32,9 @@ Aqui foi construído o funcionamento do **Decoder**, responsável pela geração
 
 Componentes implementados:
 
-* Masked Self-Attention
-* Cross-Attention entre Encoder e Decoder
-* Simulação do **loop auto-regressivo de geração de tokens**
+* Masked Self-Attention  
+* Cross-Attention entre Encoder e Decoder  
+* Simulação do **loop auto-regressivo de geração de tokens**  
 
 ---
 
@@ -44,36 +44,66 @@ Integração de todos os componentes anteriores para formar um **Transformer Enc
 
 O modelo final realiza uma simulação de tradução utilizando:
 
-* Encoder Blocks
-* Decoder Blocks
-* Feed-Forward Networks
-* Add & Norm
-* Loop auto-regressivo com tokens `<START>` e `<EOS>`
+* Encoder Blocks  
+* Decoder Blocks  
+* Feed-Forward Networks  
+* Add & Norm  
+* Loop auto-regressivo com tokens `<START>` e `<EOS>`  
+
+---
+
+### 🔹 Lab 6 – Tokenização com BPE e WordPiece
+
+Neste laboratório foi explorado o processo de **tokenização de texto**, etapa fundamental para modelos Transformer, que não operam diretamente com strings, mas com representações numéricas derivadas de tokens.
+
+Foram abordadas duas técnicas amplamente utilizadas:
+
+**1. Byte Pair Encoding (BPE)**  
+Implementação do algoritmo do zero, incluindo:
+
+* Contagem de pares de símbolos adjacentes  
+* Seleção do par mais frequente  
+* Processo iterativo de fusão (merge)  
+* Construção progressiva de sub-palavras  
+
+**2. WordPiece (Hugging Face / BERT)**  
+Utilização de um tokenizador pré-treinado para análise prática:
+
+* Tokenização de palavras complexas em sub-palavras  
+* Uso do prefixo `##` para indicar continuação de tokens  
+* Demonstração de como o modelo lida com palavras desconhecidas (*out-of-vocabulary*)  
+
+Este laboratório complementa os anteriores ao mostrar como o texto é preparado antes de ser processado pela arquitetura Transformer.
 
 ---
 
 ## 🛠 Tecnologias Utilizadas
 
-* Python
-* NumPy
-* Git
-* Visual Studio Code
+* Python  
+* NumPy  
+* Transformers (Hugging Face)  
+* Git  
+* Visual Studio Code  
 
 ---
 
 ## 🎯 Objetivo Educacional
 
-O foco deste projeto não é criar um modelo treinado, mas **compreender profundamente a arquitetura Transformer**, replicando sua lógica fundamental de forma didática. Pelos menos por enquanto.
+O foco deste projeto não é criar um modelo treinado, mas **compreender profundamente a arquitetura Transformer**, replicando sua lógica fundamental de forma didática.
+
+Além disso, o Lab 6 introduz a etapa de **pré-processamento textual**, essencial para o funcionamento de modelos reais de linguagem.
 
 ---
 
 ## ⚠️ Nota sobre uso de IA
 
-Partes de alguns códigos podem ter sido **geradas ou complementadas com auxílio de ferramentas de IA**, porém **toda a lógica foi revisada, compreendida e adaptada pelo autor** conforme exigido pela disciplina.
+Partes de alguns códigos podem ter sido **geradas ou complementadas com auxílio de ferramentas de IA**, principalmente na implementação da função de fusão de tokens (`merge_vocab`).
+
+Todo o código foi **revisado, testado e adaptado manualmente pelo autor**, conforme exigido pela disciplina.
 
 ---
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Bruno Barbosa**
+Desenvolvido por **Bruno Barbosa**  
 Disciplina: *Tópicos em Inteligência Artificial - Eletiva 3*
